@@ -52,8 +52,8 @@ export function Board({ square, onPlay, xIsSet }) {
 
 export default function Home() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
-  const xIsSet = currentMove % 2 === 0;
   const [currentMove, setCurrentMove] = useState(0);
+  const xIsSet = currentMove % 2 === 0;
   const currentSquare = history[currentMove];
   const handlePlay = (nextSquare) => {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquare];
